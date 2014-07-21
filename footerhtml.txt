@@ -1,0 +1,21 @@
+<div class="footerMain">
+            <div style="" class="wrapper">
+ <ul class="ulNoStyle">
+    <li>© 2010 <a href="http://discussions.zoho.com/pricingtest/">Sample Forum </a>. All Rights Reserved.</li>
+   
+    <li  style="display:none"><a href="http://www.zoho.com/terms.html">Terms & Conditions</a></li>
+    <li>(Works best in IE 7.0+, Firefox 2.0+, Chrome, Safari)</li> 
+    <li style="float: right;" class="flRight">
+        
+    </li>
+</ul>
+
+            </div>
+        </div>
+    <li style="float: right;" class="flRight">
+        
+    </li>
+</ul>
+
+            </div>
+        </div>
