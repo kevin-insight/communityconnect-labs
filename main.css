@@ -445,8 +445,10 @@ a {
   text-decoration: none;
   color: #1672B9;
 }
-a:hover {
-  color: #7E7E7E;
+a:hover,
+a:link:hover {
+  color: #7E7E7E !important;
+  text-decoration: none;
 }
 a:visited {
   color: #1672B9;
@@ -457,25 +459,27 @@ a:visited {
  */
 
 .main-header {
-  padding-top: 12px;
-  padding-bottom: 12px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
-.main-header .logo {
+.logo {
   width: 275px;
   height: auto;
 }
-.main-header .main-nav,
-.main-header .top-nav {
+.main-nav,
+.top-nav {
   list-style: none;
   padding: 0;
   float: right;
 }
-.main-header .main-nav {
-  margin-top: -55px;
+.main-nav {
+  margin-top: -33px;
 }
-.main-header .main-nav li {
+.main-nav li {
   display: inline-block;
-  margin-left: 10px;
+  margin-left: 7px;
+}
+.main-nav li a {
   background-color: #E7E7E7;
   padding-left: 15px;
   padding-right: 15px;
@@ -483,12 +487,19 @@ a:visited {
   padding-bottom: 10px;
   border-radius: 3px;
 }
-.main-header .top-nav {
+.main-nav li a:hover {
+  background-color: #D8D8D8;
+  color: #1672B9 !important;
+}
+.top-nav {
   margin-top: 0px;
 }
-.main-header .top-nav li {
+.top-nav li {
   display: inline-block;
   margin-left: 15px;
+}
+.top-nav .active {
+  border-bottom: 2px solid #1672B9;
 }
 
 /*
@@ -500,12 +511,36 @@ a:visited {
   padding-top: 1px;
   padding-bottom: 1px;
 }
+.sub-header {
+  position: relative;
+}
 .sub-header h2 {
   color: white;
   font-weight: 300;
   font-size: 20px;
   margin-top: 10px;
   margin-bottom: 10px;
+}
+
+/*
+ * Search form
+ */
+
+#jq-primarySearchForm {
+  font-size: 12px;
+  position: absolute;
+  right: 0px;
+  top: 2px;
+}
+#searchInputBox {
+  color: black;
+}
+.jq-zoho-search-input {
+  width: 280px;
+  height: 20px;
+  border-radius: 20px;
+  border: 1px solid #aaa;
+  padding-left: 10px;
 }
 
 /*

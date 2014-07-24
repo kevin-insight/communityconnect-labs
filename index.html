@@ -11,31 +11,53 @@
         <a href="#"><img class="logo" src="http://civictechnologies.com/wp-content/themes/civictechnologies/img/sequence/communityconnect-logo.png"></a>
         <ul class="top-nav">
           <li>
-            <a href="#">About CommunityConnect</a>
+            <a href="http://civictechnologies.com/communityconnect/">About CommunityConnect</a>
+          </li>
+          <li class="active">
+            <a href="http://discussions.zoho.com/communityconnectlabs">Forum</a>
           </li>
           <li>
-            <a class="active" href="#">Forum</a>
+            <a href="http://civictechnologies.com/communityconnect-resources/">Resources</a>
           </li>
           <li>
+            <a href="http://civictechnologies.com/communityconnect-case-studies">Case Studies</a>
+          </li>
+          <!--<li>
             <a href="#">Blog</a>
-          </li>
+          </li>-->
         </ul>
         <ul class="main-nav">
           <li>
             <a href="http://discussions.zoho.com/communityconnectlabs#AllForums">All Forums</a>
           </li>
           <li>
-            <a href="#">New Post</a>
+            <a href="http://discussions.zoho.com/communityconnectlabs#newtopic">New Post</a>
           </li>
           <li>
-            <a href="#">Recent Posts</a>
+            <a href="http://discussions.zoho.com/communityconnectlabs#home">Recent Posts</a>
           </li>
           <li>
-            <a href="#">My Account</a>
+            <a href="http://discussions.zoho.com/communityconnectlabs#MyArea">My Account</a>
           </li>
+          <#if isAModerator>
           <li>
-            <a href="#">Log Out</a>
+            <a href="http://discussions.zoho.com/communityconnectlabs/#Moderation">Moderation</a>
           </li>
+          </#if>
+          <#if isAdmin>
+          <li>
+            <a href="http://discussions.zoho.com/communityconnectlabs/settings">Settings</a>
+          </li>
+          </#if>
+          <#if loggedIn>
+          <li>
+            <a href="/Logout.do?serviceurl=/communityconnectlabs">Log Out</a>
+          </li>
+          <#else>
+          <li>
+            <a href="/portalLogin.do?serviceurl=${surl}&forumGroupUrl=communityconnectlabs">Sign In</a>
+          </li>
+          </#if>
         </ul>
       </header>
     </div>
@@ -43,6 +65,11 @@
       <div class="container">
         <div class="sub-header">
           <h2>CommunityConnect Labs<h2>
+          <div id="jq-primarySearchForm">
+            <div>
+              <input onkeypress="if(event.keyCode == 13){processHash('Search')}" class="jq-zoho-search-input" type="text" placeholder="Search CommunityConnect Labs" id="searchInputBox" accesskey="f" title="Search CommunityConnect Labs" name="search">
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -58,10 +85,10 @@
           <p class="copyright">&copy; 2014 Futterman and Associates, Inc. All Rights Reserved. Powered by <a href="http://discussions.zoho.com/home">Zoho</a>.</p>
           <ul class="footer-nav">
             <li>
-              <a href="#">All Forums</a>
+              <a href="http://discussions.zoho.com/communityconnectlabs#AllForums">All Forums</a>
             </li>
             <li>
-              <a href="#">Recent Posts</a>
+              <a href="http://discussions.zoho.com/communityconnectlabs#home">Recent Posts</a>
             </li>
           </ul>
       </div>
