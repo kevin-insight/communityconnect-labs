@@ -555,6 +555,9 @@ a:visited {
   background-color: white;
   border-radius: 5px;
 }
+.pointListBorder .postTitle {
+  width: inherit;
+}
 
 /*
  * Footer
